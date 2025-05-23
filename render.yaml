@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: telegram-feedback-webhook
+    env: python
+    plan: free
+    buildCommand: ""
+    startCommand: python main.py
+    envVars:
+      - key: API_TOKEN
+        value: "PASTE_YOUR_TOKEN"
+      - key: ADMIN_CHAT_ID
+        value: "PASTE_YOUR_TELEGRAM_ID"
+      - key: WEBHOOK_URL
+        value: "https://your-subdomain.onrender.com"
